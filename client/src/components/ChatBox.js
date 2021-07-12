@@ -19,7 +19,7 @@ class ChatBox extends Component {
     }
 
     render() {
-        // console.log(this.props.data)
+
         return (
             <div className="container">
                 <div className="alert alert-primary mt-3" role="alert">
