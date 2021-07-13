@@ -37,19 +37,19 @@ class ChatForm extends Component {
                 <div className="timeline-body">
                     <div className="timeline-content">
                         <div className="input">
-                        <form onSubmit={this.handleClickPost}>
+                            <form onSubmit={this.handleClickPost}>
                                 <div className="alert alert-primary mt-3 ">
 
-                                <input 
-                                        type="text" 
-                                        className="form-control rounded-corner" 
+                                    <input
+                                        type="text"
+                                        className="form-control rounded-corner"
                                         placeholder="Your name"
                                         name="name"
                                         value={this.state.name}
                                         onChange={this.handleInputChange} />
-                                    <textarea 
-                                        type="text" 
-                                        className="form-control rounded-corner" 
+                                    <textarea
+                                        type="text"
+                                        className="form-control rounded-corner"
                                         placeholder="Write your chat here..."
                                         name="message"
                                         value={this.state.message}

@@ -5,10 +5,10 @@ import ReactMarkdown from 'react-markdown';
 import Swal from 'sweetalert2';
 
 class ChatItem extends Component {
-    handleBtnResend = () =>{
+    handleBtnResend = () => {
         this.props.resendMessage(this.props.id, this.props.name, this.props.message)
     }
-    handleBtnDelete = () =>{
+    handleBtnDelete = () => {
         Swal.fire({
             title: 'Apakah anda yakin?',
             text: "Data Anda tidak dapat dipulihkan lagi !",
@@ -38,15 +38,15 @@ class ChatItem extends Component {
                 <div className="timeline-time">
                     <span className="date">{createdAtDate}</span>
                     <span className="time">{createdAtTime}</span>
-                    <button className={this.props.sent ? "btn btn-outline-danger btn-sm":"d-none"} onClick={this.handleBtnDelete}><i className="fa fa-trash"></i></button>
+                    <button className={this.props.sent ? "btn btn-outline-danger btn-sm" : "d-none"} onClick={this.handleBtnDelete}><i className="fa fa-trash"></i></button>
                 </div>
                 <div className="timeline-icon">
-                    <div className= {`status ${this.props.no % 2 === 0 ?  "btn-success" : " btn-warning "  }`}><h3><b>-</b></h3></div>
+                    <div className={`status ${this.props.no % 2 === 0 ? "btn-success" : " btn-warning "}`}><h3><b>-</b></h3></div>
                 </div>
-                <div className={this.props.sent ? "timeline-body":"timeline-body border border-danger text-danger"}>
+                <div className={this.props.sent ? "timeline-body" : "timeline-body border border-danger text-danger"}>
                     <div className="timeline-header d-flex">
                         <div className="p-2"><span className={this.props.sent ? "username" : "username text-danger"}>{this.props.name}</span></div>
-                        <div className={this.props.sent ? "d-none":"ml-auto p-2 "}><button className="btnResend text-danger" onClick={this.handleBtnResend}>Gagal | <i className="fa fa-repeat"></i></button></div>
+                        <div className={this.props.sent ? "d-none" : "ml-auto p-2 "}><button className="btnResend text-danger" onClick={this.handleBtnResend}>Gagal | <i className="fa fa-repeat"></i></button></div>
                     </div>
                     <div className="timeline-content">
                         <div className="lead">

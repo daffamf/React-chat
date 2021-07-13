@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ChatItem from './ChatItem';
 
 export default class ChatList extends Component {
-    
+
     render() {
         const dataNode = this.props.data.map((item, index) =>
             <ChatItem
