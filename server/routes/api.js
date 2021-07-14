@@ -5,7 +5,6 @@ var Message = require('../models/message')
 
 router.post('/message', function (req, res, next) {
     var { id, name, message } = req.body;
-
     Message.create({ id, name, message, createdAt: Date.now() }, (err, data) => {
         res.status(201).json({
             success: true,
@@ -19,8 +18,6 @@ router.post('/message', function (req, res, next) {
 router.get('/message', function (req, res, next) {
     Message.find(
         {})
-        // .limit(3)
-        // .sort({ 'id': -1 })
         .exec(function (err, data) {
             res.status(200).json({
                 data
