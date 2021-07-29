@@ -14,13 +14,11 @@ const message = (state = [], action) => {
 
         case 'ADD_MESSAGE_SUCCESS':
             return state.map(item => {
-                // return console.log(item)
                 Swal.fire({
                     icon: 'success',
                     title: 'Message has been Add!',
                     text: ''
                 }).then(function () {
-                    // history.push('/home')
                 });
                 item.sent = true
                 return item
@@ -37,8 +35,6 @@ const message = (state = [], action) => {
         case 'LOAD_MESSAGE_SUCCESS':
             return action.data.data.map((item) => {
                 item.sent = true;
-                // socket.emit('chat', item);
-                // console.log(item)
                 return item
             })
 
